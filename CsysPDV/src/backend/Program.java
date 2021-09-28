@@ -6,6 +6,7 @@ public class Program {
 	 System.out.println("hellow word!");
 	 System.out.println("hellow word!2");
 	 System.out.println("hellow word!3");
+	 System.out.println("hellow word!4");
 	}
 
 }
