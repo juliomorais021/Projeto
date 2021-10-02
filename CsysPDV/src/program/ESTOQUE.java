@@ -2,27 +2,14 @@ package program;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JSplitPane;
-import java.awt.BorderLayout;
 import javax.swing.JButton;
-import javax.swing.SwingConstants;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.Box;
-import java.awt.Panel;
-import java.awt.Component;
-import java.awt.Color;
 import javax.swing.JTable;
-import javax.swing.JTextArea;
-import java.awt.Scrollbar;
 
 public class ESTOQUE {
 
-	private JFrame frmEstoque;
+	JFrame frmEstoque;
 	private JTable table;
 
 	/**
@@ -90,5 +77,10 @@ public class ESTOQUE {
 		JLabel lblNewLabel_3 = new JLabel("Quantidade");
 		lblNewLabel_3.setBounds(402, 22, 83, 14);
 		frmEstoque.getContentPane().add(lblNewLabel_3);
+	}
+
+	public void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+		
 	}
 }
