@@ -6,6 +6,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.JList;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.TextArea;
 
 public class ESTOQUE {
 
@@ -47,20 +51,24 @@ public class ESTOQUE {
 		frmEstoque.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Adicionar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
 		btnNewButton.setBounds(10, 47, 83, 31);
 		frmEstoque.getContentPane().add(btnNewButton);
 		
 		JButton btnRemover = new JButton("Remover");
+		btnRemover.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
 		btnRemover.setBounds(10, 89, 83, 31);
 		frmEstoque.getContentPane().add(btnRemover);
-		
-		JButton btnEditar = new JButton("Editar");
-		btnEditar.setBounds(10, 131, 83, 31);
-		frmEstoque.getContentPane().add(btnEditar);
-		
-		table = new JTable();
-		table.setBounds(103, 47, 424, 312);
-		frmEstoque.getContentPane().add(table);
 		
 		JLabel lblNewLabel = new JLabel("ID");
 		lblNewLabel.setBounds(115, 24, 46, 14);
@@ -77,6 +85,13 @@ public class ESTOQUE {
 		JLabel lblNewLabel_3 = new JLabel("Quantidade");
 		lblNewLabel_3.setBounds(402, 22, 83, 14);
 		frmEstoque.getContentPane().add(lblNewLabel_3);
+		
+		table = new JTable();
+		table.setColumnSelectionAllowed(true);
+		table.setFillsViewportHeight(true);
+		table.setCellSelectionEnabled(true);
+		table.setBounds(103, 55, 398, 294);
+		frmEstoque.getContentPane().add(table);
 	}
 
 	public void setVisible(boolean b) {
