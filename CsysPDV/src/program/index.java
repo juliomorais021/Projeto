@@ -9,10 +9,14 @@ import javax.swing.JTextField;
 import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
+import java.awt.Toolkit;
+import java.awt.Color;
+import java.awt.SystemColor;
+import javax.swing.ImageIcon;
 
 public class index {
 
-	private JFrame frame;
+	private JFrame frmCsyspdv;
 	private JTextField textField;
 	private JPasswordField passwordField;
 
@@ -24,7 +28,7 @@ public class index {
 			public void run() {
 				try {
 					index window = new index();
-					window.frame.setVisible(true);
+					window.frmCsyspdv.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -43,25 +47,31 @@ public class index {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmCsyspdv = new JFrame();
+		frmCsyspdv.getContentPane().setBackground(SystemColor.textHighlight);
+		frmCsyspdv.getContentPane().setForeground(Color.CYAN);
+		frmCsyspdv.setForeground(Color.CYAN);
+		frmCsyspdv.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\filip\\OneDrive\\Imagens\\1683bbee32d279ec96ae032ae463965d.png"));
+		frmCsyspdv.setTitle("CsysPDV");
+		frmCsyspdv.setBounds(100, 100, 450, 300);
+		frmCsyspdv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmCsyspdv.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Usuario");
 		lblNewLabel.setBounds(110, 64, 46, 14);
-		frame.getContentPane().add(lblNewLabel);
+		frmCsyspdv.getContentPane().add(lblNewLabel);
 		
 		textField = new JTextField();
 		textField.setBounds(166, 61, 150, 20);
-		frame.getContentPane().add(textField);
+		frmCsyspdv.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Senha");
 		lblNewLabel_1.setBounds(110, 113, 46, 14);
-		frame.getContentPane().add(lblNewLabel_1);
+		frmCsyspdv.getContentPane().add(lblNewLabel_1);
 		
-		JButton btnNewButton = new JButton("Login");
+		JButton btnNewButton = new JButton("(\u261E\uFF9F\u30EE\uFF9F)\u261E Login");
+		btnNewButton.setSelectedIcon(new ImageIcon("C:\\Users\\filip\\OneDrive\\Imagens\\152532.png"));
 		btnNewButton.addActionListener(new ActionListener() {
 		@Override
 			public void actionPerformed(ActionEvent e) {
@@ -70,7 +80,7 @@ public class index {
 			{
 				
 				JOptionPane.showMessageDialog(null, "Logado com susesso!");	
-				frame.setVisible(false);
+				frmCsyspdv.setVisible(false);
 				ESTOQUE abri = new ESTOQUE();
 				abri.frmEstoque.setVisible(true);
 				
@@ -84,14 +94,14 @@ public class index {
 				
 			}
 		});
-		btnNewButton.setBounds(199, 178, 89, 23);
-		frame.getContentPane().add(btnNewButton);
+		btnNewButton.setBounds(179, 152, 133, 42);
+		frmCsyspdv.getContentPane().add(btnNewButton);
 		
 	
 				
 		passwordField = new JPasswordField();
 		passwordField.setBounds(166, 110, 150, 20);
-		frame.getContentPane().add(passwordField);
+		frmCsyspdv.getContentPane().add(passwordField);
 	}
 	
 	
