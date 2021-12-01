@@ -105,7 +105,7 @@ public class ESTOQUE {
         btnRegist.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		
-        		new registro();
+        		new Registro();
         		
         		
         	}
