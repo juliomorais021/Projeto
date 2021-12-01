@@ -9,6 +9,8 @@ import javax.swing.JFrame;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
+import java.awt.SystemColor;
 
 public class Adi extends JFrame {
 	private JTextField textField;
@@ -19,38 +21,41 @@ public class Adi extends JFrame {
 	 * Create the panel.
 	 */
 	public Adi() {
+		getContentPane().setBackground(SystemColor.textHighlight);
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\filip\\OneDrive\\Imagens\\1683bbee32d279ec96ae032ae463965d.png"));
+		setTitle("Adicionar\r\n");
 	  
             
-        setBounds(100, 100, 600, 450);
+        setBounds(100, 100, 264, 284);
         
 
-		setLayout(null);
+		getContentPane().setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Nome");
 		lblNewLabel.setBounds(41, 43, 46, 14);
-		add(lblNewLabel);
+		getContentPane().add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("Preço");
 		lblNewLabel_1.setBounds(41, 81, 46, 14);
-		add(lblNewLabel_1);
+		getContentPane().add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Quantidade");
 		lblNewLabel_2.setBounds(41, 128, 76, 14);
-		add(lblNewLabel_2);
+		getContentPane().add(lblNewLabel_2);
 
 		textField = new JTextField();
 		textField.setBounds(149, 125, 86, 20);
-		add(textField);
+		getContentPane().add(textField);
 		textField.setColumns(10);
 
 		textField_1 = new JTextField();
 		textField_1.setBounds(149, 78, 86, 20);
-		add(textField_1);
+		getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 
 		textField_2 = new JTextField();
 		textField_2.setBounds(149, 40, 86, 20);
-		add(textField_2);
+		getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 
 		JButton btnNewButton = new JButton("Adicionar");
@@ -61,7 +66,7 @@ public class Adi extends JFrame {
 			}
 		});
 		btnNewButton.setBounds(78, 183, 89, 23);
-		add(btnNewButton);
+		getContentPane().add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Voltar");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -70,7 +75,7 @@ public class Adi extends JFrame {
 			}
 		});
 		btnNewButton_1.setBounds(78, 217, 89, 23);
-		add(btnNewButton_1);
+		getContentPane().add(btnNewButton_1);
 		setVisible(true);
 	}
 
